@@ -7,7 +7,10 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "review:seed": "node server/cli/seed.js",
+    "review:test": "node --test server/test/",
+    "review:db:init": "node server/cli/init-db.js"
   },
   "keywords": [],
   "author": "",

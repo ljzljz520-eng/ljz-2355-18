@@ -1,3 +1,8 @@
+---
+review:
+  enabled: true
+---
+
 # Installation
 
 ## Using Package Manager

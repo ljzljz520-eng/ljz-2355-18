@@ -1,0 +1,297 @@
+{
+  "generatedAt": 1790906400000,
+  "generatedAtText": "2026-10-02 10:00",
+  "zone": "Asia/Shanghai",
+  "docs": [
+    {
+      "docId": "doc_install",
+      "route": "/guide/installation",
+      "title": "安装指南",
+      "declaredScope": [
+        "body",
+        "examples",
+        "figures"
+      ],
+      "cycleDays": 90,
+      "owner": {
+        "id": "u_alice",
+        "name": "Alice（平台组）"
+      },
+      "status": "in_review",
+      "reasons": {
+        "codes": [
+          "pending_items"
+        ],
+        "detail": {
+          "failedCount": 0,
+          "pendingCount": 2,
+          "totalCount": 2,
+          "daysLeft": 90,
+          "missing": [
+            "body:/guide/installation.md",
+            "table:/guide/installation.md#api"
+          ],
+          "triggers": [
+            "fixed-cycle-scan"
+          ]
+        }
+      },
+      "dueDate": 1798646400000,
+      "dueDateText": "2026-12-31",
+      "daysLeft": 90,
+      "stale": false,
+      "items": {
+        "total": 2,
+        "passed": 0,
+        "failed": 0,
+        "pending": 2
+      },
+      "publicDate": 1790906400000,
+      "publicDateText": "2026-10-02 10:00",
+      "lastRelease": "2026.09 发布版",
+      "verifiedScope": [
+        "body",
+        "tables"
+      ],
+      "signoffHistory": [
+        {
+          "by": "u_alice",
+          "at": 1790906400000,
+          "atText": "2026-10-02 10:00",
+          "release": "2026.09 发布版",
+          "scopeCount": 2,
+          "scopeKinds": [
+            "body",
+            "table"
+          ]
+        }
+      ]
+    },
+    {
+      "docId": "doc_quick",
+      "route": "/guide/quickstart",
+      "title": "快速开始",
+      "declaredScope": [
+        "body",
+        "examples",
+        "figures"
+      ],
+      "cycleDays": 90,
+      "owner": {
+        "id": "u_carol",
+        "name": "Carol（继任）"
+      },
+      "status": "in_review",
+      "reasons": {
+        "codes": [
+          "pending_items"
+        ],
+        "detail": {
+          "failedCount": 0,
+          "pendingCount": 2,
+          "totalCount": 2,
+          "daysLeft": 90,
+          "missing": [
+            "body:/guide/quickstart.md",
+            "table:/guide/quickstart.md#api"
+          ],
+          "triggers": [
+            "fixed-cycle-scan"
+          ]
+        }
+      },
+      "dueDate": 1798646400000,
+      "dueDateText": "2026-12-31",
+      "daysLeft": 90,
+      "stale": false,
+      "items": {
+        "total": 2,
+        "passed": 0,
+        "failed": 0,
+        "pending": 2
+      },
+      "publicDate": 1790906400000,
+      "publicDateText": "2026-10-02 10:00",
+      "lastRelease": "2026.09 发布版",
+      "verifiedScope": [
+        "body",
+        "tables"
+      ],
+      "signoffHistory": [
+        {
+          "by": "u_dave",
+          "at": 1790906400000,
+          "atText": "2026-10-02 10:00",
+          "release": "2026.09 发布版",
+          "scopeCount": 2,
+          "scopeKinds": [
+            "body",
+            "table"
+          ]
+        }
+      ]
+    },
+    {
+      "docId": "doc_button",
+      "route": "/components/button",
+      "title": "Button 按钮",
+      "declaredScope": [
+        "body",
+        "examples",
+        "figures"
+      ],
+      "cycleDays": 90,
+      "owner": {
+        "id": "u_bob",
+        "name": "Bob（组件组）"
+      },
+      "status": "partial_failed",
+      "reasons": {
+        "codes": [
+          "failed_items",
+          "content_changed_pending"
+        ],
+        "detail": {
+          "failedCount": 1,
+          "pendingCount": 1,
+          "totalCount": 5,
+          "daysLeft": 7,
+          "missing": [
+            "example:examples/button/basic.vue",
+            "figure:images/button-anatomy.png"
+          ],
+          "triggers": [
+            "fixed-cycle-scan",
+            "dep:example:examples/button/basic.vue",
+            "dep:figure:images/button-anatomy.png"
+          ]
+        }
+      },
+      "dueDate": 1791475200000,
+      "dueDateText": "2026-10-09",
+      "daysLeft": 7,
+      "stale": false,
+      "items": {
+        "total": 5,
+        "passed": 3,
+        "failed": 1,
+        "pending": 1
+      },
+      "publicDate": null,
+      "publicDateText": null,
+      "lastRelease": null,
+      "verifiedScope": [],
+      "signoffHistory": []
+    },
+    {
+      "docId": "doc_orphan",
+      "route": "/guide/orphan",
+      "title": "孤儿文档（无继任示例）",
+      "declaredScope": [
+        "body",
+        "examples",
+        "figures"
+      ],
+      "cycleDays": 60,
+      "owner": null,
+      "status": "owner_missing",
+      "reasons": {
+        "codes": [
+          "owner_missing",
+          "pending_items"
+        ],
+        "detail": {
+          "failedCount": 0,
+          "pendingCount": 2,
+          "totalCount": 2,
+          "daysLeft": -1,
+          "missing": [
+            "body:/guide/orphan.md",
+            "table:/guide/orphan.md#api"
+          ],
+          "triggers": [
+            "fixed-cycle-scan"
+          ]
+        }
+      },
+      "dueDate": 1790784000000,
+      "dueDateText": "2026-10-01",
+      "daysLeft": -1,
+      "stale": false,
+      "items": {
+        "total": 2,
+        "passed": 0,
+        "failed": 0,
+        "pending": 2
+      },
+      "publicDate": null,
+      "publicDateText": null,
+      "lastRelease": null,
+      "verifiedScope": [],
+      "signoffHistory": []
+    },
+    {
+      "docId": "doc_due",
+      "route": "/guide/stale-page",
+      "title": "临期文档（黄色提示示例）",
+      "declaredScope": [
+        "body",
+        "examples",
+        "figures"
+      ],
+      "cycleDays": 90,
+      "owner": {
+        "id": "u_alice",
+        "name": "Alice（平台组）"
+      },
+      "status": "due_soon",
+      "reasons": {
+        "codes": [
+          "pending_items"
+        ],
+        "detail": {
+          "failedCount": 0,
+          "pendingCount": 2,
+          "totalCount": 2,
+          "daysLeft": 2,
+          "missing": [
+            "body:/guide/stale-page.md",
+            "table:/guide/stale-page.md#api"
+          ],
+          "triggers": [
+            "fixed-cycle-scan"
+          ]
+        }
+      },
+      "dueDate": 1791043200000,
+      "dueDateText": "2026-10-04",
+      "daysLeft": 2,
+      "stale": false,
+      "items": {
+        "total": 2,
+        "passed": 0,
+        "failed": 0,
+        "pending": 2
+      },
+      "publicDate": null,
+      "publicDateText": null,
+      "lastRelease": null,
+      "verifiedScope": [],
+      "signoffHistory": []
+    }
+  ],
+  "demo": {
+    "reminder": {
+      "firstRun": {
+        "created": 2,
+        "rerun": 0
+      },
+      "secondRun": {
+        "created": 0,
+        "rerun": 2
+      },
+      "overdueCount": 1
+    },
+    "note": "演示数据由 server/cli/seed.js 生成，时间锚定当天 10:00（Asia/Shanghai）"
+  }
+}

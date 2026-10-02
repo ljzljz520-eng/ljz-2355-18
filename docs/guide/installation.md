@@ -1,3 +1,8 @@
+---
+review:
+  enabled: true
+---
+
 # 安装
 
 ## 使用包管理器

@@ -1,3 +1,9 @@
+---
+review:
+  enabled: true
+  declaredScope: [body, examples, figures]
+---
+
 # Button
 
 Commonly used operation buttons.

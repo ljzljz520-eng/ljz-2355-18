@@ -1,3 +1,8 @@
+---
+review:
+  enabled: true
+---
+
 # Quick Start
 
 This section will introduce how to use My Component Lib in your project.

@@ -38,3 +38,29 @@
 ## 3. 设计亮点
 - **零手动注册**：开发者只需在 `examples/` 文件夹下添加 `.vue` 文件，即可在任何 Markdown 中引用，极大提升了开发效率。
 - **极致还原**：不仅是颜色，在代码折叠交互、API 表格间距等细节上均贴合 Element Plus 规范。
+
+## 4. 文档复审管理（第二轮迭代）
+
+### 4.1 需求拆解
+将密集的中文需求拆为三组可独立验收的能力：
+1. **站点展示**：页脚（负责人/校验范围/日期）、到期横幅（只提示不撤内容）、管理台（含时区切换与“为何超期”）。
+2. **后台领域**：按发布版生成任务；固定周期扫描 vs 依赖变更触发两类来源；合并与幂等；逐项检查/签收/部分失败；责任交接（离职/小组调整）；提醒扫描。
+3. **持久化**：PG 保存责任交接与审阅证据，签收/交接/证据 append-only（DB 触发器兜底）。
+
+### 4.2 关键设计决策
+- **审阅项即证据单元**：正文、每个示例、每张图、每张表独立成 item（`core/items.js`）。`coverageCheck` 保证图必须落在 frontmatter `declaredScope` 内，且声明范围逐项被 passed 才能签收——从机制上杜绝“查了一个示例就算整篇通过”。
+- **hash 语义**：item.contentHash 表示“已按该版本检查过”。依赖触发只把相关项置 pending、**不**更新 hash；reviewer 带着页面实查 hash 复核时才刷新。于是“检查后页面又更新”在 `recordCheck`（前置防线）与 `signoff`（最终防线）两处都能被 CONTENT_CHANGED 拦截。
+- **幂等键三段式**（`core/keys.js`）：`fixed:<release>:<doc>`、`change:<release>:<doc>:<kind>:<path>:<hash>`、`reminder:<task>:<winStart>:<winEnd>`。提醒重跑命中同键只累加 runCount，不产生重复通知。
+- **合并语义**：同发布版 open 任务双向合并（triggerIds/reasons 并集，到期日只提前不延后）；新发布版固定扫描把旧版未完成任务标记 `superseded`——保留历史但不再作为状态来源。
+- **时区**：所有绝对时间用 timestamptz/epoch，站点按配置时区做**日历日**比较（`core/time.js` 不动点迭代求本地午夜，兼容 DST）。同一绝对时刻在不同站点时区可能给出不同到期判定（测试 18 覆盖）。
+- **责任不可覆盖**：`docs.owner_id` 只代表当前待办负责人；真实责任链在 `handovers`，签收者在 `signoffs.by_user`。PG 触发器在数据库层禁止 UPDATE/DELETE。
+- **公开清单只读投影**：`buildManifest()` 只输出站点需要的字段；publicDate/verifiedScope 永远来自最近一次真实签收，反映真实完成范围。
+
+### 4.3 工程结构
+- 领域逻辑纯 JS、零框架依赖，内存仓储即可完整跑通；PG 仓储（`store/pg.js`）接口同构，`pg` 为可选依赖。
+- 24 个 node:test 用例覆盖全部验收点：时区切换、无继任负责人、部分检查失败、签收时页面更新、提醒任务重跑、两类任务合并、重复触发幂等。
+- 种子 CLI 锚定“当天 10:00（上海）”，保证演示数据每天可复现。
+
+### 4.4 踩到的坑
+- VitePress 的 Layout 插槽 `doc-before/doc-after` 用于挂横幅与页脚，避免侵入各 Markdown；SSR 时清单尚未 fetch，组件在客户端挂载后渲染（类名在 theme chunk 中）。
+- jsonb 与 text[] 同名字段（reminders.reasons 是 jsonb，tasks.reasons 是 text[]）必须按「实体.字段」精确标注序列化，不能按列名全局处理。

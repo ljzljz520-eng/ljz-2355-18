@@ -63,8 +63,9 @@ export default defineConfig({
       lang: 'zh-CN',
       themeConfig: {
         nav: [
-          { text: '指南', link: '/guide/installation', activeMatch: '/guide/' },
-          { text: '组件', link: '/components/button', activeMatch: '/components/' }
+          { text: '指南', link: '/guide/installation', activeMatch: '/guide/(installation|quickstart|orphan|stale-page)' },
+          { text: '组件', link: '/components/button', activeMatch: '/components/' },
+          { text: '复审管理', link: '/guide/review-admin', activeMatch: '/guide/review-admin' }
         ],
         sidebar: {
           '/guide/': [
@@ -73,6 +74,14 @@ export default defineConfig({
               items: [
                 { text: '安装', link: '/guide/installation' },
                 { text: '快速开始', link: '/guide/quickstart' }
+              ]
+            },
+            {
+              text: '文档复审',
+              items: [
+                { text: '复审管理台', link: '/guide/review-admin' },
+                { text: '无继任负责人示例', link: '/guide/orphan' },
+                { text: '临期提示示例', link: '/guide/stale-page' }
               ]
             }
           ],
@@ -98,7 +107,8 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Guide', link: '/en/guide/installation', activeMatch: '/en/guide/' },
-          { text: 'Components', link: '/en/components/button', activeMatch: '/en/components/' }
+          { text: 'Components', link: '/en/components/button', activeMatch: '/en/components/' },
+          { text: 'Reviews', link: '/guide/review-admin' }
         ],
         sidebar: {
           '/en/guide/': [
@@ -106,7 +116,8 @@ export default defineConfig({
               text: 'Basic',
               items: [
                 { text: 'Installation', link: '/en/guide/installation' },
-                { text: 'Quick Start', link: '/en/guide/quickstart' }
+                { text: 'Quick Start', link: '/en/guide/quickstart' },
+                { text: 'Review console', link: '/guide/review-admin' }
               ]
             }
           ],

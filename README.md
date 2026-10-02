@@ -55,3 +55,23 @@ npm run docs:preview
 examples/button/basic.vue
 :::
 ```
+
+
+## 📋 文档复审管理（新增）
+
+在文档站之上增加了「产品文档复审管理」能力：
+
+- **页脚信息**：每个文档页脚展示负责人、校验范围、复审到期日、公开日期。
+- **管理台**：[`docs/guide/review-admin.md`](docs/guide/review-admin.md) 汇总所有文档状态，支持**站点时区切换**（UTC/上海/柏林/洛杉矶），并展示「为什么超期」而非只有黄色标签。
+- **后台任务**：按发布版生成维护任务，比较并合并**固定周期扫描**与**依赖变更触发**两类任务，重复触发/提醒重跑全部幂等。
+- **责任与证据（PG）**：PostgreSQL 保存责任交接与审阅证据；签收/交接/证据 append-only，触发器禁止修改删除。负责人离职或小组调整只转派待办，**不覆盖历史签收者**。
+- **精细审阅项**：检查一处示例不代表整篇已复审；正文/每个示例/每张图/每张表独立成项，图必须满足 frontmatter 声明范围；正文关键变化只让相关项待重验。
+- **到期不撤内容**：复审到期只提示「信息需核实」，历史可读内容保留；公开日期反映真实完成范围。
+
+```bash
+npm run review:test     # 24 个领域/验收测试
+npm run review:seed     # 生成演示公开清单 docs/public/review-manifest.json
+npm run docs:dev        # 访问 /guide/review-admin
+```
+
+详见 [`server/README.md`](server/README.md)。
