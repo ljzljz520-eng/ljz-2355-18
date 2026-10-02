@@ -1,3 +1,16 @@
+---
+review:
+  owner: Bob 李
+  declaredScope: [examples/**, api/**]
+  scope: [examples/button/basic.vue, api/button]
+  signer: Bob 李
+  outcome: full
+  signedAt: '2026-10-02T02:00:00Z'
+  periodDays: 90
+  tz: Asia/Shanghai
+  status: verified
+---
+
 # Button 按钮
 
 常用的操作按钮。

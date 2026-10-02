@@ -2,10 +2,12 @@ import DefaultTheme from 'vitepress/theme'
 import VpDemo from './components/VpDemo.vue'
 import VpApi from './components/VpApi.vue'
 import BaseButton from './components/BaseButton.vue'
+import ReviewLayout from './layout/ReviewLayout.vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
+  Layout: ReviewLayout,
   enhanceApp({ app }) {
     app.component('VpDemo', VpDemo)
     app.component('VpApi', VpApi)

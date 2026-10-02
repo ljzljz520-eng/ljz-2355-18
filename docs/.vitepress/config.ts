@@ -74,6 +74,12 @@ export default defineConfig({
                 { text: '安装', link: '/guide/installation' },
                 { text: '快速开始', link: '/guide/quickstart' }
               ]
+            },
+            {
+              text: '治理',
+              items: [
+                { text: '文档复审管理', link: '/guide/doc-review' }
+              ]
             }
           ],
           '/components/': [
@@ -107,6 +113,12 @@ export default defineConfig({
               items: [
                 { text: 'Installation', link: '/en/guide/installation' },
                 { text: 'Quick Start', link: '/en/guide/quickstart' }
+              ]
+            },
+            {
+              text: 'Governance',
+              items: [
+                { text: 'Doc Re-Review', link: '/en/guide/doc-review' }
               ]
             }
           ],
