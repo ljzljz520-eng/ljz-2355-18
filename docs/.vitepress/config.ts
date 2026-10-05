@@ -117,6 +117,14 @@ export default defineConfig({
                 { text: 'Button', link: '/en/components/button' }
               ]
             }
+          ],
+          '/en/governance/': [
+            {
+              text: 'Review Governance',
+              items: [
+                { text: 'Documentation Review', link: '/en/governance/review' }
+              ]
+            }
           ]
         },
         footer: {

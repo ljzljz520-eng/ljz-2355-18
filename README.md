@@ -55,3 +55,13 @@ npm run docs:preview
 examples/button/basic.vue
 :::
 ```
+
+## 📋 产品文档复审管理
+
+文档页脚展示 **负责人 / 校验范围 / 复审日期**，后台按发布版生成维护任务，
+PostgreSQL 保存责任交接与逐项审阅证据。详见 [`review/README.md`](./review/README.md)，
+站点演示见 [复审治理页](docs/governance/review.md)。
+
+```bash
+npm run review:test   # 13 项验收场景（时区切换/无继任/部分失败/签收更新/提醒重跑…）
+```

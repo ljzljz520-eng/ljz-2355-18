@@ -7,7 +7,9 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "review:test": "node --test review/test/",
+    "review:check": "node --check review/src/review-service.js && node --check review/src/memory-repo.js && node --check review/src/pg-repo.js && node --test review/test/"
   },
   "keywords": [],
   "author": "",

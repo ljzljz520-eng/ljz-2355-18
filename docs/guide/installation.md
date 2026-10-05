@@ -7,3 +7,10 @@
 ```bash
 npm install my-component-lib
 ```
+
+<script setup lang="ts">
+import { currentReview } from '../.vitepress/review-demo-data'
+</script>
+
+<ReviewStateBanner :state="currentReview" />
+<ReviewFooter :state="currentReview" />
