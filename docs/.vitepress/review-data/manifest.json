@@ -1,0 +1,210 @@
+{
+  "zone": "Asia/Shanghai",
+  "generatedAt": "2026-10-06T01:30:00.000Z",
+  "generatedDay": "2026-10-06",
+  "generatedAtLabel": "2026/10/06 09:30",
+  "entries": [
+    {
+      "docId": "doc-install",
+      "path": "/guide/installation",
+      "title": "安装指南",
+      "version": "1.0",
+      "publishedAt": "2026-09-01T01:00:00.000Z",
+      "owner": null,
+      "scope": [
+        {
+          "id": "install-pm",
+          "label": "包管理器安装命令",
+          "kind": "target"
+        },
+        {
+          "id": "install-version",
+          "label": "版本要求说明",
+          "kind": "target"
+        }
+      ],
+      "coverage": {
+        "total": 2,
+        "passed": 2,
+        "failed": [],
+        "pending": []
+      },
+      "publicDate": "2026-09-03T02:00:00.000Z",
+      "lastPublicDate": null,
+      "signedAt": "2026-09-03T02:00:00.000Z",
+      "signedBy": {
+        "id": "u_chen",
+        "name": "陈默"
+      },
+      "signoffCount": 1,
+      "level": "due-for-review",
+      "overdue": true,
+      "dueDate": "2026-10-02T16:00:00.000Z",
+      "taskId": "task_rel_doc_install_1_0_4",
+      "unassigned": true,
+      "overdueReasons": [
+        {
+          "type": "cycle",
+          "text": "固定周期：v1.0 发布于 2026-09-01，复审周期 30 天，应于 2026-10-03 前完成（第 1 周期）"
+        },
+        {
+          "type": "handover",
+          "text": "责任交接：陈默 离职，目前无继任负责人，待办挂起"
+        },
+        {
+          "type": "no-owner",
+          "text": "当前没有可处理该任务的负责人，需先指定继任者"
+        }
+      ],
+      "generatedAt": "2026-10-06T01:30:00.000Z"
+    },
+    {
+      "docId": "doc-quickstart",
+      "path": "/guide/quickstart",
+      "title": "快速开始",
+      "version": "1.0",
+      "publishedAt": "2026-09-01T01:00:00.000Z",
+      "owner": {
+        "id": "u_zhou",
+        "name": "周岩"
+      },
+      "scope": [
+        {
+          "id": "quick-steps",
+          "label": "上手步骤",
+          "kind": "target"
+        },
+        {
+          "id": "quick-demo",
+          "label": "在线示例",
+          "kind": "target"
+        },
+        {
+          "id": "quick-faq",
+          "label": "常见问题",
+          "kind": "target"
+        }
+      ],
+      "coverage": {
+        "total": 3,
+        "passed": 2,
+        "failed": [],
+        "pending": [
+          {
+            "targetId": "quick-steps",
+            "label": "上手步骤",
+            "revalidateReason": null,
+            "changedBlocks": null
+          }
+        ]
+      },
+      "publicDate": null,
+      "lastPublicDate": null,
+      "signedAt": null,
+      "signedBy": null,
+      "signoffCount": 0,
+      "level": "overdue",
+      "overdue": true,
+      "dueDate": "2026-09-30T16:00:00.000Z",
+      "taskId": "task_rel_doc_quickstart_1_0_2",
+      "unassigned": false,
+      "overdueReasons": [
+        {
+          "type": "cycle",
+          "text": "固定周期：v1.0 发布于 2026-09-01，复审周期 30 天，应于 2026-10-01 前完成（第 1 周期）"
+        },
+        {
+          "type": "cycle",
+          "text": "固定周期：v1.0 发布于 2026-09-01，复审周期 30 天，应于 2026-10-01 前完成（第 2 周期）"
+        },
+        {
+          "type": "handover",
+          "text": "责任交接：林晓 因小组调整，已转派给 周岩"
+        }
+      ],
+      "generatedAt": "2026-10-06T01:30:00.000Z"
+    },
+    {
+      "docId": "doc-button",
+      "path": "/components/button",
+      "title": "Button 按钮",
+      "version": "1.0",
+      "publishedAt": "2026-09-01T01:00:00.000Z",
+      "owner": {
+        "id": "u_zhou",
+        "name": "周岩"
+      },
+      "scope": [
+        {
+          "id": "btn-basic-demo",
+          "label": "基础示例截图",
+          "kind": "target"
+        },
+        {
+          "id": "btn-props",
+          "label": "Attributes 表",
+          "kind": "target"
+        },
+        {
+          "id": "btn-events",
+          "label": "事件说明",
+          "kind": "target"
+        }
+      ],
+      "coverage": {
+        "total": 3,
+        "passed": 0,
+        "failed": [],
+        "pending": [
+          {
+            "targetId": "btn-basic-demo",
+            "label": "基础示例截图",
+            "revalidateReason": null,
+            "changedBlocks": null
+          },
+          {
+            "targetId": "btn-props",
+            "label": "Attributes 表",
+            "revalidateReason": null,
+            "changedBlocks": null
+          },
+          {
+            "targetId": "btn-events",
+            "label": "事件说明",
+            "revalidateReason": "api-spec-change",
+            "changedBlocks": null
+          }
+        ]
+      },
+      "publicDate": null,
+      "lastPublicDate": null,
+      "signedAt": null,
+      "signedBy": null,
+      "signoffCount": 0,
+      "level": "needs-recheck",
+      "overdue": true,
+      "dueDate": "2026-09-14T16:00:00.000Z",
+      "taskId": "task_rel_doc_button_1_0_3",
+      "unassigned": false,
+      "overdueReasons": [
+        {
+          "type": "cycle",
+          "text": "固定周期：v1.0 发布于 2026-09-01，复审周期 30 天，应于 2026-09-15 前完成（第 1 周期）"
+        },
+        {
+          "type": "dependency",
+          "text": "依赖变更（Button click 事件载荷变更）使 事件说明 需重新核对，宽限 7 天至 2026-09-15"
+        },
+        {
+          "type": "cycle",
+          "text": "固定周期：v1.0 发布于 2026-09-01，复审周期 30 天，应于 2026-09-15 前完成（第 2 周期）"
+        },
+        {
+          "type": "revalidate",
+          "text": "待重验：事件说明 因正文「Button click 事件载荷变更」发生关键变化，旧结论不再沿用"
+        }
+      ],
+      "generatedAt": "2026-10-06T01:30:00.000Z"
+    }
+  ]
+}

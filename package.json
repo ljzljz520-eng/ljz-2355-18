@@ -7,7 +7,9 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "review:test": "node review-system/selftest.mjs",
+    "review:demo": "node review-system/demo.mjs"
   },
   "keywords": [],
   "author": "",

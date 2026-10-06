@@ -1,0 +1,727 @@
+{
+  "users": {
+    "u_chen": {
+      "id": "u_chen",
+      "name": "陈默",
+      "group": "g_content",
+      "active": false,
+      "createdAt": "2026-09-01T01:00:00.000Z",
+      "leftAt": "2026-10-06T01:30:00.000Z"
+    },
+    "u_lin": {
+      "id": "u_lin",
+      "name": "林晓",
+      "group": "g_content",
+      "active": true,
+      "createdAt": "2026-09-01T01:00:00.000Z"
+    },
+    "u_zhou": {
+      "id": "u_zhou",
+      "name": "周岩",
+      "group": "g_platform",
+      "active": true,
+      "createdAt": "2026-09-01T01:00:00.000Z"
+    }
+  },
+  "docs": {
+    "doc-install": {
+      "id": "doc-install",
+      "path": "/guide/installation",
+      "title": "安装指南",
+      "ownerId": null,
+      "group": "g_content",
+      "currentReleaseId": "rel_doc_install_1_0",
+      "createdAt": "2026-09-01T01:00:00.000Z"
+    },
+    "doc-quickstart": {
+      "id": "doc-quickstart",
+      "path": "/guide/quickstart",
+      "title": "快速开始",
+      "ownerId": "u_zhou",
+      "group": "g_platform",
+      "currentReleaseId": "rel_doc_quickstart_1_0",
+      "createdAt": "2026-09-01T01:00:00.000Z"
+    },
+    "doc-button": {
+      "id": "doc-button",
+      "path": "/components/button",
+      "title": "Button 按钮",
+      "ownerId": "u_zhou",
+      "group": "g_platform",
+      "currentReleaseId": "rel_doc_button_1_0",
+      "createdAt": "2026-09-01T01:00:00.000Z"
+    }
+  },
+  "releases": {
+    "rel_doc_install_1_0": {
+      "id": "rel_doc_install_1_0",
+      "docId": "doc-install",
+      "version": "1.0",
+      "publishedAt": "2026-09-01T01:00:00.000Z",
+      "contentHash": "6c4436cc31bb4d3bd8690043c850ec1d5ad46da68c0ddf28b5c92c42eaa1d9ee",
+      "blocks": [
+        {
+          "id": "sec-pm",
+          "title": "使用包管理器",
+          "hash": "77b1ed8b0254df6e70a5b3dedebe57998cf6c473d1da44f5a4d321bc422488c5",
+          "dependsOn": [
+            "install-pm"
+          ]
+        },
+        {
+          "id": "sec-ver",
+          "title": "版本要求",
+          "hash": "1d094684e9dbc05a569d6ab8e65a1f8a81fcd05d50a1e085ec53f4c26697ee60",
+          "dependsOn": [
+            "install-version"
+          ]
+        }
+      ],
+      "declaredScope": [
+        {
+          "id": "install-pm",
+          "label": "包管理器安装命令",
+          "kind": "target"
+        },
+        {
+          "id": "install-version",
+          "label": "版本要求说明",
+          "kind": "target"
+        }
+      ],
+      "intervalDays": 30,
+      "publicDate": "2026-09-03T02:00:00.000Z",
+      "lastVerifiedAt": "2026-09-03T02:00:00.000Z",
+      "supersedes": null
+    },
+    "rel_doc_quickstart_1_0": {
+      "id": "rel_doc_quickstart_1_0",
+      "docId": "doc-quickstart",
+      "version": "1.0",
+      "publishedAt": "2026-09-01T01:00:00.000Z",
+      "contentHash": "d123be240dd3b8174565a302593d3143583633bd7ba8081416afc0c0b8692bf8",
+      "blocks": [
+        {
+          "id": "steps",
+          "title": "步骤",
+          "hash": "f1b64ce06b14d3c8b75ed8b78332471198db766bb1fc7ccf2d4786da834b1a5c",
+          "dependsOn": [
+            "quick-steps"
+          ]
+        },
+        {
+          "id": "demo",
+          "title": "示例",
+          "hash": "5a1f5d92632c6abcf47e811f1d0cc19cc5e37164cf226b8bf39b09022b532d68",
+          "dependsOn": [
+            "quick-demo"
+          ]
+        },
+        {
+          "id": "faq",
+          "title": "FAQ",
+          "hash": "62c9f8079026a4034a47d93060f783d344bf24d89319807663a46e886911af48",
+          "dependsOn": [
+            "quick-faq"
+          ]
+        }
+      ],
+      "declaredScope": [
+        {
+          "id": "quick-steps",
+          "label": "上手步骤",
+          "kind": "target"
+        },
+        {
+          "id": "quick-demo",
+          "label": "在线示例",
+          "kind": "target"
+        },
+        {
+          "id": "quick-faq",
+          "label": "常见问题",
+          "kind": "target"
+        }
+      ],
+      "intervalDays": 30,
+      "publicDate": null,
+      "lastVerifiedAt": null,
+      "supersedes": null
+    },
+    "rel_doc_button_1_0": {
+      "id": "rel_doc_button_1_0",
+      "docId": "doc-button",
+      "version": "1.0",
+      "publishedAt": "2026-09-01T01:00:00.000Z",
+      "contentHash": "6735bb6d57afc6e5a0a361bcd58234abc864e5e00ff71183a0dfc5c1985acb71",
+      "blocks": [
+        {
+          "id": "basic",
+          "title": "基础用法",
+          "hash": "379a702f572d78fe113173421981fb0910546ad632f604981a03928fad4b12fd",
+          "dependsOn": [
+            "btn-basic-demo"
+          ]
+        },
+        {
+          "id": "api-table",
+          "title": "Attributes",
+          "hash": "5d476f6652dcadf249e7fd06eb4ec779a84e12075c3d0c27c18a770930c268f3",
+          "dependsOn": [
+            "btn-props"
+          ]
+        },
+        {
+          "id": "events",
+          "title": "Events",
+          "hash": "fe4c2abca051570570647ec5b1fa8119a7f0d3fcbd53671334346f1568eb853c",
+          "dependsOn": [
+            "btn-events"
+          ]
+        }
+      ],
+      "declaredScope": [
+        {
+          "id": "btn-basic-demo",
+          "label": "基础示例截图",
+          "kind": "target"
+        },
+        {
+          "id": "btn-props",
+          "label": "Attributes 表",
+          "kind": "target"
+        },
+        {
+          "id": "btn-events",
+          "label": "事件说明",
+          "kind": "target"
+        }
+      ],
+      "intervalDays": 30,
+      "publicDate": null,
+      "lastVerifiedAt": null,
+      "supersedes": null
+    }
+  },
+  "checkItems": {
+    "chk_rel_doc_install_1_0_install_pm": {
+      "id": "chk_rel_doc_install_1_0_install_pm",
+      "releaseId": "rel_doc_install_1_0",
+      "targetId": "install-pm",
+      "label": "包管理器安装命令",
+      "kind": "target",
+      "covers": [
+        "install-pm"
+      ],
+      "status": "passed",
+      "revalidate": null,
+      "evidence": [
+        {
+          "at": "2026-09-03T02:00:00.000Z",
+          "by": "u_chen",
+          "status": "passed",
+          "evidence": "npm/yarn/pnpm 命令逐一执行通过",
+          "previous": {
+            "status": "pending",
+            "checkedById": null,
+            "checkedAt": null
+          }
+        }
+      ],
+      "checkedById": "u_chen",
+      "checkedAt": "2026-09-03T02:00:00.000Z"
+    },
+    "chk_rel_doc_install_1_0_install_version": {
+      "id": "chk_rel_doc_install_1_0_install_version",
+      "releaseId": "rel_doc_install_1_0",
+      "targetId": "install-version",
+      "label": "版本要求说明",
+      "kind": "target",
+      "covers": [
+        "install-version"
+      ],
+      "status": "passed",
+      "revalidate": null,
+      "evidence": [
+        {
+          "at": "2026-09-03T02:00:00.000Z",
+          "by": "u_chen",
+          "status": "passed",
+          "evidence": "核对 README 与 CI Node 版本一致",
+          "previous": {
+            "status": "pending",
+            "checkedById": null,
+            "checkedAt": null
+          }
+        }
+      ],
+      "checkedById": "u_chen",
+      "checkedAt": "2026-09-03T02:00:00.000Z"
+    },
+    "chk_rel_doc_quickstart_1_0_quick_steps": {
+      "id": "chk_rel_doc_quickstart_1_0_quick_steps",
+      "releaseId": "rel_doc_quickstart_1_0",
+      "targetId": "quick-steps",
+      "label": "上手步骤",
+      "kind": "target",
+      "covers": [
+        "quick-steps"
+      ],
+      "status": "pending",
+      "revalidate": null,
+      "evidence": [],
+      "checkedById": null,
+      "checkedAt": null
+    },
+    "chk_rel_doc_quickstart_1_0_quick_demo": {
+      "id": "chk_rel_doc_quickstart_1_0_quick_demo",
+      "releaseId": "rel_doc_quickstart_1_0",
+      "targetId": "quick-demo",
+      "label": "在线示例",
+      "kind": "target",
+      "covers": [
+        "quick-demo"
+      ],
+      "status": "passed",
+      "revalidate": null,
+      "evidence": [
+        {
+          "at": "2026-09-05T02:00:00.000Z",
+          "by": "u_lin",
+          "status": "passed",
+          "evidence": "仅核对示例可运行",
+          "previous": {
+            "status": "pending",
+            "checkedById": null,
+            "checkedAt": null
+          }
+        }
+      ],
+      "checkedById": "u_lin",
+      "checkedAt": "2026-09-05T02:00:00.000Z"
+    },
+    "chk_rel_doc_quickstart_1_0_quick_faq": {
+      "id": "chk_rel_doc_quickstart_1_0_quick_faq",
+      "releaseId": "rel_doc_quickstart_1_0",
+      "targetId": "quick-faq",
+      "label": "常见问题",
+      "kind": "target",
+      "covers": [
+        "quick-faq"
+      ],
+      "status": "passed",
+      "revalidate": null,
+      "evidence": [
+        {
+          "at": "2026-09-05T02:00:00.000Z",
+          "by": "u_lin",
+          "status": "failed",
+          "evidence": "peer deps 答案与实际安装结果不符",
+          "previous": {
+            "status": "pending",
+            "checkedById": null,
+            "checkedAt": null
+          }
+        },
+        {
+          "at": "2026-10-04T02:00:00.000Z",
+          "by": "u_lin",
+          "status": "passed",
+          "evidence": "已按实际安装结果更新 FAQ",
+          "previous": {
+            "status": "failed",
+            "checkedById": "u_lin",
+            "checkedAt": "2026-09-05T02:00:00.000Z"
+          }
+        }
+      ],
+      "checkedById": "u_lin",
+      "checkedAt": "2026-10-04T02:00:00.000Z"
+    },
+    "chk_rel_doc_button_1_0_btn_basic_demo": {
+      "id": "chk_rel_doc_button_1_0_btn_basic_demo",
+      "releaseId": "rel_doc_button_1_0",
+      "targetId": "btn-basic-demo",
+      "label": "基础示例截图",
+      "kind": "target",
+      "covers": [
+        "btn-basic-demo"
+      ],
+      "status": "pending",
+      "revalidate": null,
+      "evidence": [],
+      "checkedById": null,
+      "checkedAt": null
+    },
+    "chk_rel_doc_button_1_0_btn_props": {
+      "id": "chk_rel_doc_button_1_0_btn_props",
+      "releaseId": "rel_doc_button_1_0",
+      "targetId": "btn-props",
+      "label": "Attributes 表",
+      "kind": "target",
+      "covers": [
+        "btn-props"
+      ],
+      "status": "pending",
+      "revalidate": null,
+      "evidence": [],
+      "checkedById": null,
+      "checkedAt": null
+    },
+    "chk_rel_doc_button_1_0_btn_events": {
+      "id": "chk_rel_doc_button_1_0_btn_events",
+      "releaseId": "rel_doc_button_1_0",
+      "targetId": "btn-events",
+      "label": "事件说明",
+      "kind": "target",
+      "covers": [
+        "btn-events"
+      ],
+      "status": "pending",
+      "revalidate": {
+        "reason": "api-spec-change",
+        "changedRef": "Button click 事件载荷变更",
+        "since": "2026-09-08T03:00:00.000Z"
+      },
+      "evidence": [],
+      "checkedById": null,
+      "checkedAt": null
+    }
+  },
+  "tasks": {
+    "task_rel_doc_install_1_0_1": {
+      "id": "task_rel_doc_install_1_0_1",
+      "releaseId": "rel_doc_install_1_0",
+      "docId": "doc-install",
+      "status": "done",
+      "assigneeId": "u_chen",
+      "createdAt": "2026-09-01T01:00:00.000Z",
+      "dueDate": "2026-09-30T16:00:00.000Z",
+      "cycleIndex": 1,
+      "triggers": [
+        {
+          "kind": "schedule",
+          "at": "2026-09-01T01:00:00.000Z",
+          "cycleIndex": 1,
+          "detail": {
+            "intervalDays": 30
+          }
+        }
+      ],
+      "closedAt": "2026-09-03T02:00:00.000Z",
+      "closedReason": "verified"
+    },
+    "task_rel_doc_quickstart_1_0_2": {
+      "id": "task_rel_doc_quickstart_1_0_2",
+      "releaseId": "rel_doc_quickstart_1_0",
+      "docId": "doc-quickstart",
+      "status": "open",
+      "assigneeId": "u_zhou",
+      "createdAt": "2026-09-01T01:00:00.000Z",
+      "dueDate": "2026-09-30T16:00:00.000Z",
+      "cycleIndex": 2,
+      "triggers": [
+        {
+          "kind": "schedule",
+          "at": "2026-09-01T01:00:00.000Z",
+          "cycleIndex": 1,
+          "detail": {
+            "intervalDays": 30
+          }
+        },
+        {
+          "kind": "schedule",
+          "at": "2026-10-06T01:30:00.000Z",
+          "cycleIndex": 2,
+          "detail": {
+            "intervalDays": 30
+          }
+        },
+        {
+          "kind": "transfer",
+          "at": "2026-10-06T01:30:00.000Z",
+          "from": "u_lin",
+          "to": "u_zhou",
+          "reason": "group-adjust"
+        }
+      ]
+    },
+    "task_rel_doc_button_1_0_3": {
+      "id": "task_rel_doc_button_1_0_3",
+      "releaseId": "rel_doc_button_1_0",
+      "docId": "doc-button",
+      "status": "open",
+      "assigneeId": "u_zhou",
+      "createdAt": "2026-09-01T01:00:00.000Z",
+      "dueDate": "2026-09-14T16:00:00.000Z",
+      "cycleIndex": 2,
+      "triggers": [
+        {
+          "kind": "schedule",
+          "at": "2026-09-01T01:00:00.000Z",
+          "cycleIndex": 1,
+          "detail": {
+            "intervalDays": 30
+          }
+        },
+        {
+          "kind": "dependency",
+          "at": "2026-09-08T03:00:00.000Z",
+          "day": "2026-09-08",
+          "reason": "api-spec-change",
+          "changedRef": "Button click 事件载荷变更",
+          "affectedTargets": [
+            "btn-events"
+          ],
+          "dedupeKey": "api-spec-change|[...targets].sort().join(',')"
+        },
+        {
+          "kind": "schedule",
+          "at": "2026-10-06T01:30:00.000Z",
+          "cycleIndex": 2,
+          "detail": {
+            "intervalDays": 30
+          }
+        }
+      ]
+    },
+    "task_rel_doc_install_1_0_4": {
+      "id": "task_rel_doc_install_1_0_4",
+      "releaseId": "rel_doc_install_1_0",
+      "docId": "doc-install",
+      "status": "unassigned",
+      "assigneeId": null,
+      "createdAt": "2026-10-06T01:30:00.000Z",
+      "dueDate": "2026-10-02T16:00:00.000Z",
+      "cycleIndex": 1,
+      "triggers": [
+        {
+          "kind": "schedule",
+          "at": "2026-10-06T01:30:00.000Z",
+          "cycleIndex": 1,
+          "detail": {
+            "intervalDays": 30
+          }
+        },
+        {
+          "kind": "transfer",
+          "at": "2026-10-06T01:30:00.000Z",
+          "from": "u_chen",
+          "to": null,
+          "reason": "owner-leave"
+        }
+      ]
+    }
+  },
+  "signoffs": {
+    "sign_rel_doc_install_1_0_1": {
+      "id": "sign_rel_doc_install_1_0_1",
+      "releaseId": "rel_doc_install_1_0",
+      "docId": "doc-install",
+      "signedById": "u_chen",
+      "signedAt": "2026-09-03T02:00:00.000Z",
+      "scope": [
+        "install-pm",
+        "install-version"
+      ],
+      "checksPassed": [
+        "chk_rel_doc_install_1_0_install_pm",
+        "chk_rel_doc_install_1_0_install_version"
+      ],
+      "scopeFingerprint": "a5732092ad02d11a49d1962adf6a698d940aac492880b03b9c785ea50120b53b",
+      "publishedDate": null
+    }
+  },
+  "handovers": {
+    "handover_1": {
+      "id": "handover_1",
+      "at": "2026-10-06T01:30:00.000Z",
+      "type": "user",
+      "subjectId": "u_chen",
+      "toUserId": null,
+      "reason": "owner-leave",
+      "affectedDocIds": [
+        "doc-install"
+      ],
+      "affectedTaskIds": [
+        "task_rel_doc_install_1_0_4"
+      ]
+    },
+    "handover_2": {
+      "id": "handover_2",
+      "at": "2026-10-06T01:30:00.000Z",
+      "type": "group",
+      "subjectId": "g_content",
+      "toUserId": "u_zhou",
+      "reason": "group-adjust",
+      "affectedDocIds": [
+        "doc-quickstart"
+      ],
+      "affectedTaskIds": [
+        "task_rel_doc_quickstart_1_0_2"
+      ]
+    }
+  },
+  "reminders": {
+    "rem_1": {
+      "id": "rem_1",
+      "taskId": "task_rel_doc_quickstart_1_0_2",
+      "day": "2026-10-06",
+      "channel": "default",
+      "at": "2026-10-06T01:30:00.000Z",
+      "to": "u_zhou",
+      "unassigned": false,
+      "overdueReasons": [
+        {
+          "type": "cycle",
+          "text": "固定周期：v1.0 发布于 2026-09-01，复审周期 30 天，应于 2026-10-01 前完成（第 1 周期）"
+        },
+        {
+          "type": "cycle",
+          "text": "固定周期：v1.0 发布于 2026-09-01，复审周期 30 天，应于 2026-10-01 前完成（第 2 周期）"
+        },
+        {
+          "type": "handover",
+          "text": "责任交接：林晓 因小组调整，已转派给 周岩"
+        },
+        {
+          "type": "check-failed",
+          "text": "检查未通过：常见问题（peer deps 答案与实际安装结果不符）"
+        }
+      ]
+    },
+    "rem_2": {
+      "id": "rem_2",
+      "taskId": "task_rel_doc_button_1_0_3",
+      "day": "2026-10-06",
+      "channel": "default",
+      "at": "2026-10-06T01:30:00.000Z",
+      "to": "u_zhou",
+      "unassigned": false,
+      "overdueReasons": [
+        {
+          "type": "cycle",
+          "text": "固定周期：v1.0 发布于 2026-09-01，复审周期 30 天，应于 2026-09-15 前完成（第 1 周期）"
+        },
+        {
+          "type": "dependency",
+          "text": "依赖变更（Button click 事件载荷变更）使 事件说明 需重新核对，宽限 7 天至 2026-09-15"
+        },
+        {
+          "type": "cycle",
+          "text": "固定周期：v1.0 发布于 2026-09-01，复审周期 30 天，应于 2026-09-15 前完成（第 2 周期）"
+        },
+        {
+          "type": "revalidate",
+          "text": "待重验：事件说明 因正文「Button click 事件载荷变更」发生关键变化，旧结论不再沿用"
+        }
+      ]
+    },
+    "rem_3": {
+      "id": "rem_3",
+      "taskId": "task_rel_doc_install_1_0_4",
+      "day": "2026-10-06",
+      "channel": "default",
+      "at": "2026-10-06T01:30:00.000Z",
+      "to": "maintainer-backlog",
+      "unassigned": true,
+      "overdueReasons": [
+        {
+          "type": "cycle",
+          "text": "固定周期：v1.0 发布于 2026-09-01，复审周期 30 天，应于 2026-10-03 前完成（第 1 周期）"
+        },
+        {
+          "type": "handover",
+          "text": "责任交接：陈默 离职，目前无继任负责人，待办挂起"
+        },
+        {
+          "type": "no-owner",
+          "text": "当前没有可处理该任务的负责人，需先指定继任者"
+        }
+      ]
+    }
+  },
+  "evidence": {
+    "ev_chk_rel_doc_install_1_0_install_pm_1": {
+      "id": "ev_chk_rel_doc_install_1_0_install_pm_1",
+      "kind": "check",
+      "refId": "chk_rel_doc_install_1_0_install_pm",
+      "at": "2026-09-03T02:00:00.000Z",
+      "by": "u_chen",
+      "status": "passed",
+      "evidence": "npm/yarn/pnpm 命令逐一执行通过",
+      "previous": {
+        "status": "pending",
+        "checkedById": null,
+        "checkedAt": null
+      }
+    },
+    "ev_chk_rel_doc_install_1_0_install_version_1": {
+      "id": "ev_chk_rel_doc_install_1_0_install_version_1",
+      "kind": "check",
+      "refId": "chk_rel_doc_install_1_0_install_version",
+      "at": "2026-09-03T02:00:00.000Z",
+      "by": "u_chen",
+      "status": "passed",
+      "evidence": "核对 README 与 CI Node 版本一致",
+      "previous": {
+        "status": "pending",
+        "checkedById": null,
+        "checkedAt": null
+      }
+    },
+    "sign_rel_doc_install_1_0_1": {
+      "id": "sign_rel_doc_install_1_0_1",
+      "kind": "signoff",
+      "refId": "rel_doc_install_1_0",
+      "at": "2026-09-03T02:00:00.000Z",
+      "by": "u_chen",
+      "scope": [
+        "install-pm",
+        "install-version"
+      ]
+    },
+    "ev_chk_rel_doc_quickstart_1_0_quick_demo_1": {
+      "id": "ev_chk_rel_doc_quickstart_1_0_quick_demo_1",
+      "kind": "check",
+      "refId": "chk_rel_doc_quickstart_1_0_quick_demo",
+      "at": "2026-09-05T02:00:00.000Z",
+      "by": "u_lin",
+      "status": "passed",
+      "evidence": "仅核对示例可运行",
+      "previous": {
+        "status": "pending",
+        "checkedById": null,
+        "checkedAt": null
+      }
+    },
+    "ev_chk_rel_doc_quickstart_1_0_quick_faq_1": {
+      "id": "ev_chk_rel_doc_quickstart_1_0_quick_faq_1",
+      "kind": "check",
+      "refId": "chk_rel_doc_quickstart_1_0_quick_faq",
+      "at": "2026-09-05T02:00:00.000Z",
+      "by": "u_lin",
+      "status": "failed",
+      "evidence": "peer deps 答案与实际安装结果不符",
+      "previous": {
+        "status": "pending",
+        "checkedById": null,
+        "checkedAt": null
+      }
+    },
+    "ev_chk_rel_doc_quickstart_1_0_quick_faq_2": {
+      "id": "ev_chk_rel_doc_quickstart_1_0_quick_faq_2",
+      "kind": "check",
+      "refId": "chk_rel_doc_quickstart_1_0_quick_faq",
+      "at": "2026-10-04T02:00:00.000Z",
+      "by": "u_lin",
+      "status": "passed",
+      "evidence": "已按实际安装结果更新 FAQ",
+      "previous": {
+        "status": "failed",
+        "checkedById": "u_lin",
+        "checkedAt": "2026-09-05T02:00:00.000Z"
+      }
+    }
+  }
+}

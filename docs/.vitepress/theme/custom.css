@@ -23,3 +23,18 @@
   gap: 12px;
   flex-wrap: wrap;
 }
+/* ===== 产品文档复审管理：通用徽标 ===== */
+.rv-badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.6;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.rv-badge--ok     { background: rgba(54,173,106,.12); color: #2e8b57; border-color: rgba(54,173,106,.35); }
+.rv-badge--info   { background: var(--vp-c-bg-soft); color: var(--vp-c-text-2); border-color: var(--vp-c-divider); }
+.rv-badge--muted  { background: var(--vp-c-bg-soft); color: var(--vp-c-text-3); border-color: var(--vp-c-divider); }
+.rv-badge--warn   { background: rgba(230,162,60,.14); color: #b07418; border-color: rgba(230,162,60,.45); }
+.rv-badge--danger { background: rgba(224,76,76,.12); color: var(--vp-c-danger-1); border-color: rgba(224,76,76,.4); }

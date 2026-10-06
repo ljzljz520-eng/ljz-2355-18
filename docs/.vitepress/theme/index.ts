@@ -2,15 +2,19 @@ import DefaultTheme from 'vitepress/theme'
 import VpDemo from './components/VpDemo.vue'
 import VpApi from './components/VpApi.vue'
 import BaseButton from './components/BaseButton.vue'
+import ReviewLayout from './components/ReviewLayout.vue'
+import ReviewBoard from './components/ReviewBoard.vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
+  Layout: ReviewLayout,
   enhanceApp({ app }) {
     app.component('VpDemo', VpDemo)
     app.component('VpApi', VpApi)
     app.component('BaseButton', BaseButton)
-    
+    app.component('ReviewBoard', ReviewBoard)
+
     // Auto register examples
     const examples = import.meta.glob('../../examples/**/*.vue', { eager: true })
     for (const path in examples) {

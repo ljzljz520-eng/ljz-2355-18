@@ -64,7 +64,8 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '指南', link: '/guide/installation', activeMatch: '/guide/' },
-          { text: '组件', link: '/components/button', activeMatch: '/components/' }
+          { text: '组件', link: '/components/button', activeMatch: '/components/' },
+          { text: '复审', link: '/review/board', activeMatch: '/review/' }
         ],
         sidebar: {
           '/guide/': [
@@ -83,6 +84,15 @@ export default defineConfig({
                 { text: 'Button 按钮', link: '/components/button' }
               ]
             }
+          ],
+          '/review/': [
+            {
+              text: '复审管理',
+              items: [
+                { text: '复审面板', link: '/review/board' },
+                { text: '管理规范', link: '/review/policy' }
+              ]
+            }
           ]
         },
         footer: {
@@ -98,7 +108,8 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Guide', link: '/en/guide/installation', activeMatch: '/en/guide/' },
-          { text: 'Components', link: '/en/components/button', activeMatch: '/en/components/' }
+          { text: 'Components', link: '/en/components/button', activeMatch: '/en/components/' },
+          { text: 'Review', link: '/review/board', activeMatch: '/review/' }
         ],
         sidebar: {
           '/en/guide/': [
